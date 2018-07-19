@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:ns0="http://www.Jobsurveillance.com/CV#">
+
+  <owl:Ontology rdf:about="http://www.Jobsurveillance.com/CV">
+  </owl:Ontology>
+
+  <owl:ObjectProperty rdf:about="http://www.Jobsurveillance.com/CV#includes">
+    <rdfs:domain>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.Jobsurveillance.com/CV#includes"/>
+        <owl:someValuesFrom rdf:resource="http://www.Jobsurveillance.com/CV#CV"/>
+      </owl:Restriction>
+    </rdfs:domain>
+
+    <rdfs:range>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.Jobsurveillance.com/CV#includes"/>
+        <owl:someValuesFrom rdf:resource="http://www.Jobsurveillance.com/CV#About"/>
+      </owl:Restriction>
+    </rdfs:range>
+
+    <rdfs:range>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.Jobsurveillance.com/CV#includes"/>
+        <owl:someValuesFrom rdf:resource="http://www.Jobsurveillance.com/CV#Education"/>
+      </owl:Restriction>
+    </rdfs:range>
+
+    <rdfs:range>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.Jobsurveillance.com/CV#includes"/>
+        <owl:someValuesFrom rdf:resource="http://www.Jobsurveillance.com/CV#Experience"/>
+      </owl:Restriction>
+    </rdfs:range>
+
+    <rdfs:range>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.Jobsurveillance.com/CV#includes"/>
+        <owl:someValuesFrom rdf:resource="http://www.Jobsurveillance.com/CV#Personal_Details"/>
+      </owl:Restriction>
+    </rdfs:range>
+
+    <rdfs:range>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.Jobsurveillance.com/CV#includes"/>
+        <owl:someValuesFrom rdf:resource="http://www.Jobsurveillance.com/CV#Referees"/>
+      </owl:Restriction>
+    </rdfs:range>
+
+    <rdfs:range>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.Jobsurveillance.com/CV#includes"/>
+        <owl:someValuesFrom rdf:resource="http://www.Jobsurveillance.com/CV#Skills"/>
+      </owl:Restriction>
+    </rdfs:range>
+
+    <rdfs:range>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.Jobsurveillance.com/CV#includes"/>
+        <owl:someValuesFrom rdf:resource="http://www.Jobsurveillance.com/CV#Activities/Achievements"/>
+      </owl:Restriction>
+    </rdfs:range>
+
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.Jobsurveillance.com/CV#Activity_Name">
+    <rdfs:domain>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.Jobsurveillance.com/CV#includes"/>
+        <owl:someValuesFrom rdf:resource="http://www.Jobsurveillance.com/CV#Activities/Achievements"/>
+      </owl:Restriction>
+    </rdfs:domain>
+
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.Jobsurveillance.com/CV#Activity_Year">
+    <rdfs:domain>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.Jobsurveillance.com/CV#includes"/>
+        <owl:someValuesFrom rdf:resource="http://www.Jobsurveillance.com/CV#Activities/Achievements"/>
+      </owl:Restriction>
+    </rdfs:domain>
+
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.Jobsurveillance.com/CV#Address">
+    <rdfs:domain>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.Jobsurveillance.com/CV#includes"/>
+        <owl:someValuesFrom rdf:resource="http://www.Jobsurveillance.com/CV#Personal_Details"/>
+      </owl:Restriction>
+    </rdfs:domain>
+
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+     </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.Jobsurveillance.com/CV#Job_Category">
+        <rdfs:domain>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.Jobsurveillance.com/CV#includes"/>
+            <owl:someValuesFrom rdf:resource="http://www.Jobsurveillance.com/CV#Personal_Details"/>
+          </owl:Restriction>
+        </rdfs:domain>
+
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.Jobsurveillance.com/CV#Company">
+    <rdfs:domain>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.Jobsurveillance.com/CV#includes"/>
+        <owl:someValuesFrom rdf:resource="http://www.Jobsurveillance.com/CV#Experience"/>
+      </owl:Restriction>
+    </rdfs:domain>
+
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.Jobsurveillance.com/CV#Degree">
+    <rdfs:domain>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.Jobsurveillance.com/CV#includes"/>
+        <owl:someValuesFrom rdf:resource="http://www.Jobsurveillance.com/CV#Education"/>
+      </owl:Restriction>
+    </rdfs:domain>
+
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.Jobsurveillance.com/CV#E_Years">
+    <rdfs:domain>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.Jobsurveillance.com/CV#includes"/>
+        <owl:someValuesFrom rdf:resource="http://www.Jobsurveillance.com/CV#Experience"/>
+      </owl:Restriction>
+    </rdfs:domain>
+
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.Jobsurveillance.com/CV#Email_Id">
+    <rdfs:domain>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.Jobsurveillance.com/CV#includes"/>
+        <owl:someValuesFrom rdf:resource="http://www.Jobsurveillance.com/CV#Personal_Details"/>
+      </owl:Restriction>
+    </rdfs:domain>
+
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.Jobsurveillance.com/CV#Full_Name">
+    <rdfs:domain>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.Jobsurveillance.com/CV#includes"/>
+        <owl:someValuesFrom rdf:resource="http://www.Jobsurveillance.com/CV#Personal_Details"/>
+      </owl:Restriction>
+    </rdfs:domain>
+
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.Jobsurveillance.com/CV#Language">
+    <rdfs:domain>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.Jobsurveillance.com/CV#includes"/>
+        <owl:someValuesFrom rdf:resource="http://www.Jobsurveillance.com/CV#Skills"/>
+      </owl:Restriction>
+    </rdfs:domain>
+
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.Jobsurveillance.com/CV#Phone_Number">
+    <rdfs:domain>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.Jobsurveillance.com/CV#includes"/>
+        <owl:someValuesFrom rdf:resource="http://www.Jobsurveillance.com/CV#Personal_Details"/>
+      </owl:Restriction>
+    </rdfs:domain>
+
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.Jobsurveillance.com/CV#Position">
+    <rdfs:domain>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.Jobsurveillance.com/CV#includes"/>
+        <owl:someValuesFrom rdf:resource="http://www.Jobsurveillance.com/CV#Experience"/>
+      </owl:Restriction>
+    </rdfs:domain>
+
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.Jobsurveillance.com/CV#R_Company_Name">
+    <rdfs:domain>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.Jobsurveillance.com/CV#includes"/>
+        <owl:someValuesFrom rdf:resource="http://www.Jobsurveillance.com/CV#Referees"/>
+      </owl:Restriction>
+    </rdfs:domain>
+
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.Jobsurveillance.com/CV#R_Email_Id">
+    <rdfs:domain>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.Jobsurveillance.com/CV#includes"/>
+        <owl:someValuesFrom rdf:resource="http://www.Jobsurveillance.com/CV#Referees"/>
+      </owl:Restriction>
+    </rdfs:domain>
+
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.Jobsurveillance.com/CV#R_Official_Address">
+    <rdfs:domain>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.Jobsurveillance.com/CV#includes"/>
+        <owl:someValuesFrom rdf:resource="http://www.Jobsurveillance.com/CV#Referees"/>
+      </owl:Restriction>
+    </rdfs:domain>
+
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.Jobsurveillance.com/CV#R_Phone_No">
+    <rdfs:domain>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.Jobsurveillance.com/CV#includes"/>
+        <owl:someValuesFrom rdf:resource="http://www.Jobsurveillance.com/CV#Referees"/>
+      </owl:Restriction>
+    </rdfs:domain>
+
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.Jobsurveillance.com/CV#R_Position">
+    <rdfs:domain>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.Jobsurveillance.com/CV#includes"/>
+        <owl:someValuesFrom rdf:resource="http://www.Jobsurveillance.com/CV#Referees"/>
+      </owl:Restriction>
+    </rdfs:domain>
+
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.Jobsurveillance.com/CV#Referee_Name">
+    <rdfs:domain>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.Jobsurveillance.com/CV#includes"/>
+        <owl:someValuesFrom rdf:resource="http://www.Jobsurveillance.com/CV#Referees"/>
+      </owl:Restriction>
+    </rdfs:domain>
+
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.Jobsurveillance.com/CV#Technical">
+    <rdfs:domain>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.Jobsurveillance.com/CV#includes"/>
+        <owl:someValuesFrom rdf:resource="http://www.Jobsurveillance.com/CV#Skills"/>
+      </owl:Restriction>
+    </rdfs:domain>
+
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.Jobsurveillance.com/CV#Year">
+    <rdfs:domain>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.Jobsurveillance.com/CV#includes"/>
+        <owl:someValuesFrom rdf:resource="http://www.Jobsurveillance.com/CV#Education"/>
+      </owl:Restriction>
+    </rdfs:domain>
+
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </owl:DatatypeProperty>
+
+  <owl:Class rdf:about="http://www.Jobsurveillance.com/CV#About">
+  </owl:Class>
+
+  <owl:Class rdf:about="http://www.Jobsurveillance.com/CV#CV">
+  </owl:Class>
+
+  <owl:Class rdf:about="http://www.Jobsurveillance.com/CV#Education">
+  </owl:Class>
+
+  <owl:Class rdf:about="http://www.Jobsurveillance.com/CV#Experience">
+  </owl:Class>
+
+  <owl:Class rdf:about="http://www.Jobsurveillance.com/CV#Personal_Details">
+  </owl:Class>
+
+  <owl:Class rdf:about="http://www.Jobsurveillance.com/CV#Referees">
+  </owl:Class>
+
+  <owl:Class rdf:about="http://www.Jobsurveillance.com/CV#Skills">
+  </owl:Class>
+
+  <owl:Class rdf:about="http://www.Jobsurveillance.com/CV#Activities/Achievements">
+  </owl:Class>
+
+  <owl:NamedIndividual rdf:about="http://www.Jobsurveillance.com/CV#Candidate1">
+    <rdf:type>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.Jobsurveillance.com/CV#includes"/>
+        <owl:someValuesFrom rdf:resource="http://www.Jobsurveillance.com/CV#CV"/>
+      </owl:Restriction>
+    </rdf:type>
+
+    <ns0:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Q block, Bharathi mawatha</ns0:Address>
+    <ns0:Company rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ABC</ns0:Company>
+    <ns0:Degree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B.Sc (Hons), Information Technology</ns0:Degree>
+    <ns0:Email_Id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">shanya23@gmail.com</ns0:Email_Id>
+    <ns0:Skills rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CSS</ns0:Skills>
+    <ns0:Job_Category rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InformationTechnology</ns0:Job_Category>
+    <ns0:Full_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shanya</ns0:Full_Name>
+    <ns0:Phone_Number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0773452789</ns0:Phone_Number>
+    <ns0:YearsofExperience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns0:YearsofExperience>
+
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://www.Jobsurveillance.com/CV#Candidate2">
+    <rdf:type>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.Jobsurveillance.com/CV#includes"/>
+        <owl:someValuesFrom rdf:resource="http://www.Jobsurveillance.com/CV#CV"/>
+      </owl:Restriction>
+    </rdf:type>
+
+    <ns0:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">s block, kotahena</ns0:Address>
+    <ns0:Company rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IFS</ns0:Company>
+    <ns0:Degree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B.Sc (Hons), Information Technology</ns0:Degree>
+    <ns0:Email_Id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">raju123@gmail.com</ns0:Email_Id>
+    <ns0:Skills rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Java</ns0:Skills>
+    <ns0:Job_Category rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marketing</ns0:Job_Category>
+    <ns0:Full_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rajeepan</ns0:Full_Name>
+    <ns0:Phone_Number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0897654321</ns0:Phone_Number>
+    <ns0:YearsofExperience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns0:YearsofExperience>
+    <ns0:R_Company_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Raju shekar</ns0:R_Company_Name>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://www.Jobsurveillance.com/CV#Candidate3">
+    <rdf:type>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.Jobsurveillance.com/CV#includes"/>
+        <owl:someValuesFrom rdf:resource="http://www.Jobsurveillance.com/CV#CV"/>
+      </owl:Restriction>
+    </rdf:type>
+
+     <ns0:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moratuwa</ns0:Address>
+          <ns0:Company rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OneIT</ns0:Company>
+          <ns0:Degree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B.Sc (Hons), Information Technology</ns0:Degree>
+          <ns0:Email_Id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dharshan26@gmail.com</ns0:Email_Id>
+          <ns0:Skills rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CSS</ns0:Skills>
+          <ns0:Job_Category rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InformationTechnology</ns0:Job_Category>
+          <ns0:Full_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dharshan</ns0:Full_Name>
+          <ns0:Phone_Number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0771508641</ns0:Phone_Number>
+          <ns0:YearsofExperience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ns0:YearsofExperience>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://www.Jobsurveillance.com/CV#Candidate4">
+      <rdf:type>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="http://www.Jobsurveillance.com/CV#includes"/>
+          <owl:someValuesFrom rdf:resource="http://www.Jobsurveillance.com/CV#CV"/>
+        </owl:Restriction>
+      </rdf:type>
+
+      <ns0:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maradana</ns0:Address>
+      <ns0:Company rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WSO2</ns0:Company>
+      <ns0:Degree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B.Sc (Hons), Information Technology</ns0:Degree>
+      <ns0:Email_Id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abishalini37@gmail.com</ns0:Email_Id>
+      <ns0:Job_Category rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HumanResources</ns0:Job_Category>
+      <ns0:Skills rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Employee Relationships</ns0:Skills>
+      <ns0:Full_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abishalini</ns0:Full_Name>
+      <ns0:Phone_Number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0771234567</ns0:Phone_Number>
+      <ns0:YearsofExperience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns0:YearsofExperience>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.Jobsurveillance.com/CV#Candidate5">
+      <rdf:type>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="http://www.Jobsurveillance.com/CV#includes"/>
+          <owl:someValuesFrom rdf:resource="http://www.Jobsurveillance.com/CV#CV"/>
+        </owl:Restriction>
+      </rdf:type>
+
+      <ns0:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Awisawella</ns0:Address>
+      <ns0:Company rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cinnamon Pay</ns0:Company>
+      <ns0:Degree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B.Sc (Hons), Information Technology</ns0:Degree>
+      <ns0:Email_Id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">janani.s@gmail.com</ns0:Email_Id>
+      <ns0:Skills rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CSS</ns0:Skills>
+      <ns0:Job_Category rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InformationTechnology</ns0:Job_Category>
+      <ns0:Full_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Janani</ns0:Full_Name>
+      <ns0:Phone_Number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0768271261</ns0:Phone_Number>
+      <ns0:YearsofExperience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ns0:YearsofExperience>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.Jobsurveillance.com/CV#Candidate6">
+      <rdf:type>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="http://www.Jobsurveillance.com/CV#includes"/>
+          <owl:someValuesFrom rdf:resource="http://www.Jobsurveillance.com/CV#CV"/>
+        </owl:Restriction>
+      </rdf:type>
+
+      <ns0:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Colombo 15</ns0:Address>
+      <ns0:Company rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TechOrin</ns0:Company>
+      <ns0:Degree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B.Sc (Hons), Information Technology</ns0:Degree>
+      <ns0:Email_Id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">yashmitha@gmail.com</ns0:Email_Id>
+      <ns0:Skills rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Java</ns0:Skills>
+      <ns0:Job_Category rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marketing</ns0:Job_Category>
+      <ns0:Full_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yashmitha</ns0:Full_Name>
+      <ns0:Phone_Number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0723679017</ns0:Phone_Number>
+      <ns0:YearsofExperience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns0:YearsofExperience>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.Jobsurveillance.com/CV#Candidate7">
+      <rdf:type>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="http://www.Jobsurveillance.com/CV#includes"/>
+          <owl:someValuesFrom rdf:resource="http://www.Jobsurveillance.com/CV#CV"/>
+        </owl:Restriction>
+      </rdf:type>
+
+    <ns0:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">malabe</ns0:Address>
+    <ns0:Company rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SLIIT</ns0:Company>
+    <ns0:Degree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B.Sc (Hons), Information Technology</ns0:Degree>
+    <ns0:Email_Id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">janaka10@gmail.com</ns0:Email_Id>
+    <ns0:Skills rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Employee Relationships</ns0:Skills>
+    <ns0:Job_Category rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InformationTechnology</ns0:Job_Category>
+    <ns0:Full_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Janaka</ns0:Full_Name>
+    <ns0:Phone_Number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0783456271</ns0:Phone_Number>
+    <ns0:YearsofExperience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ns0:YearsofExperience>
+
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.Jobsurveillance.com/CV#JobAdvertisement1">
+        <rdf:type rdf:resource="http://www.Jobsurveillance.com/CV#includes"/>
+        <ns0:JobID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AB101</ns0:JobID>
+        <ns0:JobSkills rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Java</ns0:JobSkills>
+        <ns0:Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Java Developers</ns0:Title>
+     </owl:NamedIndividual>
+
+     <owl:NamedIndividual rdf:about="http://www.Jobsurveillance.com/CV#JobAdvertisement2">
+             <rdf:type rdf:resource="http://www.Jobsurveillance.com/CV#includes"/>
+             <ns0:JobID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AB102</ns0:JobID>
+             <ns0:JobSkills rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CSS</ns0:JobSkills>
+             <ns0:Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FE Developers</ns0:Title>
+          </owl:NamedIndividual>
+
+     <owl:NamedIndividual rdf:about="http://www.Jobsurveillance.com/CV#JobAdvertisement3">
+          <rdf:type rdf:resource="http://www.Jobsurveillance.com/CV#includes"/>
+          <ns0:JobID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AB103</ns0:JobID>
+          <ns0:JobSkills rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Employee Relationships</ns0:JobSkills>
+          <ns0:Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HR Assistant</ns0:Title>
+     </owl:NamedIndividual>
+
+  <owl:AllDisjointClasses rdf:nodeID="genid31">
+    <owl:members>
+      <rdf:Description>
+        <rdf:first rdf:resource="http://www.Jobsurveillance.com/CV#About"/>
+        <rdf:rest>
+          <rdf:Description>
+            <rdf:first rdf:resource="http://www.Jobsurveillance.com/CV#CV"/>
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first rdf:resource="http://www.Jobsurveillance.com/CV#Education"/>
+                <rdf:rest>
+                  <rdf:Description>
+                    <rdf:first rdf:resource="http://www.Jobsurveillance.com/CV#Experience"/>
+                    <rdf:rest>
+                      <rdf:Description>
+                        <rdf:first rdf:resource="http://www.Jobsurveillance.com/CV#Personal_Details"/>
+                        <rdf:rest>
+                          <rdf:Description>
+                            <rdf:first rdf:resource="http://www.Jobsurveillance.com/CV#Referees"/>
+                            <rdf:rest>
+                              <rdf:Description>
+                                <rdf:first rdf:resource="http://www.Jobsurveillance.com/CV#Skills"/>
+                                <rdf:rest>
+                                  <rdf:Description>
+                                    <rdf:first rdf:resource="http://www.Jobsurveillance.com/CV#Activities/Achievements"/>
+                                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                  </rdf:Description>
+                                </rdf:rest>
+
+                              </rdf:Description>
+                            </rdf:rest>
+
+                          </rdf:Description>
+                        </rdf:rest>
+
+                      </rdf:Description>
+                    </rdf:rest>
+
+                  </rdf:Description>
+                </rdf:rest>
+
+              </rdf:Description>
+            </rdf:rest>
+
+          </rdf:Description>
+        </rdf:rest>
+
+      </rdf:Description>
+    </owl:members>
+
+  </owl:AllDisjointClasses>
+
+</rdf:RDF>

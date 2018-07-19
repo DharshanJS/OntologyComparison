@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+  <owl:Ontology rdf:about="http://www.OBJS.com/JOB">
+  </owl:Ontology>
+
+  <owl:Class rdf:about="http://www.OBJS.com/JOB#Required_Experience">
+    <rdfs:subClassOf rdf:resource="http://www.OBJS.com/JOB#JOB"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://www.OBJS.com/JOB#JOB">
+  </owl:Class>
+
+  <owl:Class rdf:about="http://www.OBJS.com/JOB#Location">
+    <rdfs:subClassOf rdf:resource="http://www.OBJS.com/JOB#JOB"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://www.OBJS.com/JOB#Deadline">
+    <rdfs:subClassOf rdf:resource="http://www.OBJS.com/JOB#JOB"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://www.OBJS.com/JOB#Required_Skills">
+    <rdfs:subClassOf rdf:resource="http://www.OBJS.com/JOB#JOB"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://www.OBJS.com/JOB#Roles">
+    <rdfs:subClassOf rdf:resource="http://www.OBJS.com/JOB#JOB"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://www.OBJS.com/JOB#Job_Title">
+    <rdfs:subClassOf rdf:resource="http://www.OBJS.com/JOB#JOB"/>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="http://www.OBJS.com/JOB#includes">
+    <rdfs:label xml:lang="en">includes</rdfs:label>
+    <rdfs:range rdf:resource="http://www.OBJS.com/JOB#Deadline"/>
+    <rdfs:range rdf:resource="http://www.OBJS.com/JOB#Required_Experience"/>
+    <rdfs:range rdf:resource="http://www.OBJS.com/JOB#Required_Skills"/>
+    <rdfs:range rdf:resource="http://www.OBJS.com/JOB#Roles"/>
+    <rdfs:range rdf:resource="http://www.OBJS.com/JOB#Location"/>
+    <rdfs:range rdf:resource="http://www.OBJS.com/JOB#Job_Title"/>
+    <rdfs:domain rdf:resource="http://www.OBJS.com/JOB#JOB"/>
+  </owl:ObjectProperty>
+
+</rdf:RDF>
