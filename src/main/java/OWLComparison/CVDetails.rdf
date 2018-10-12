@@ -321,12 +321,13 @@
     <ns0:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Q block, Bharathi mawatha</ns0:Address>
     <ns0:Company rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ABC</ns0:Company>
     <ns0:Degree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B.Sc (Hons), Information Technology</ns0:Degree>
-    <ns0:Email_Id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">shanya23@gmail.com</ns0:Email_Id>
-    <ns0:Skills rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CSS</ns0:Skills>
+    <ns0:Email_Id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sharanya23@gmail.com</ns0:Email_Id>
+    <ns0:Skills rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CSS,JS</ns0:Skills>
     <ns0:Job_Category rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InformationTechnology</ns0:Job_Category>
-    <ns0:Full_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shanya</ns0:Full_Name>
+    <ns0:Full_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sharanya</ns0:Full_Name>
     <ns0:Phone_Number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0773452789</ns0:Phone_Number>
-    <ns0:YearsofExperience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns0:YearsofExperience>
+    <ns0:Qualification_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Degree</ns0:Qualification_Type>
+    <ns0:YearsofExperience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</ns0:YearsofExperience>
 
   </owl:NamedIndividual>
 
@@ -340,13 +341,14 @@
 
     <ns0:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">s block, kotahena</ns0:Address>
     <ns0:Company rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IFS</ns0:Company>
-    <ns0:Degree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B.Sc (Hons), Information Technology</ns0:Degree>
+    <ns0:Degree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diploma in Information Technology</ns0:Degree>
     <ns0:Email_Id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">raju123@gmail.com</ns0:Email_Id>
-    <ns0:Skills rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Java</ns0:Skills>
+    <ns0:Skills rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CSS</ns0:Skills>
     <ns0:Job_Category rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marketing</ns0:Job_Category>
     <ns0:Full_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rajeepan</ns0:Full_Name>
     <ns0:Phone_Number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0897654321</ns0:Phone_Number>
-    <ns0:YearsofExperience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ns0:YearsofExperience>
+    <ns0:Qualification_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diploma</ns0:Qualification_Type>
+    <ns0:YearsofExperience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ns0:YearsofExperience>
     <ns0:R_Company_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Raju shekar</ns0:R_Company_Name>
   </owl:NamedIndividual>
 
@@ -362,7 +364,7 @@
           <ns0:Company rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OneIT</ns0:Company>
           <ns0:Degree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B.Sc (Hons), Information Technology</ns0:Degree>
           <ns0:Email_Id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dharshan26@gmail.com</ns0:Email_Id>
-          <ns0:Skills rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CSS</ns0:Skills>
+          <ns0:Skills rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Java</ns0:Skills>
           <ns0:Job_Category rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InformationTechnology</ns0:Job_Category>
           <ns0:Full_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dharshan</ns0:Full_Name>
           <ns0:Phone_Number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0771508641</ns0:Phone_Number>
@@ -400,11 +402,12 @@
       <ns0:Company rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cinnamon Pay</ns0:Company>
       <ns0:Degree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B.Sc (Hons), Information Technology</ns0:Degree>
       <ns0:Email_Id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">janani.s@gmail.com</ns0:Email_Id>
-      <ns0:Skills rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CSS</ns0:Skills>
+      <ns0:Skills rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CSS,JS</ns0:Skills>
       <ns0:Job_Category rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InformationTechnology</ns0:Job_Category>
       <ns0:Full_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Janani</ns0:Full_Name>
       <ns0:Phone_Number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0768271261</ns0:Phone_Number>
-      <ns0:YearsofExperience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ns0:YearsofExperience>
+      <ns0:Qualification_Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Degree</ns0:Qualification_Type>
+      <ns0:YearsofExperience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ns0:YearsofExperience>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="http://www.Jobsurveillance.com/CV#Candidate6">
@@ -449,21 +452,21 @@
     <owl:NamedIndividual rdf:about="http://www.Jobsurveillance.com/CV#JobAdvertisement1">
         <rdf:type rdf:resource="http://www.Jobsurveillance.com/CV#includes"/>
         <ns0:JobID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AB101</ns0:JobID>
-        <ns0:JobSkills rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Java</ns0:JobSkills>
+        <ns0:Required_Skills rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Java</ns0:Required_Skills>
         <ns0:Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Java Developers</ns0:Title>
      </owl:NamedIndividual>
 
      <owl:NamedIndividual rdf:about="http://www.Jobsurveillance.com/CV#JobAdvertisement2">
              <rdf:type rdf:resource="http://www.Jobsurveillance.com/CV#includes"/>
              <ns0:JobID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AB102</ns0:JobID>
-             <ns0:JobSkills rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CSS</ns0:JobSkills>
+             <ns0:Required_Skills rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CSS,JS</ns0:Required_Skills>
              <ns0:Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FE Developers</ns0:Title>
           </owl:NamedIndividual>
 
      <owl:NamedIndividual rdf:about="http://www.Jobsurveillance.com/CV#JobAdvertisement3">
           <rdf:type rdf:resource="http://www.Jobsurveillance.com/CV#includes"/>
           <ns0:JobID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AB103</ns0:JobID>
-          <ns0:JobSkills rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Employee Relationships</ns0:JobSkills>
+          <ns0:Required_Skills rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Employee Relationships</ns0:Required_Skills>
           <ns0:Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HR Assistant</ns0:Title>
      </owl:NamedIndividual>
 

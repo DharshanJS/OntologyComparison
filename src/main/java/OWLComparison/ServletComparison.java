@@ -10,12 +10,14 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import org.apache.jena.base.Sys;
 import org.apache.jena.query.Query;
 import org.apache.jena.query.QueryExecution;
 import org.apache.jena.query.QueryExecutionFactory;
 import org.apache.jena.query.QueryFactory;
 import org.apache.jena.query.QuerySolution;
 import org.apache.jena.query.ResultSet;
+import org.apache.jena.rdf.model.Literal;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.util.FileManager;
@@ -31,7 +33,7 @@ public class ServletComparison extends HttpServlet {
 
         FileManager.get().addLocatorClassLoader(ServletComparison.class.getClassLoader());
         Model modelFile = FileManager.get().loadModel
-                ("C:\\Users\\admin\\IdeaProjects\\SampleWebProject\\src\\main\\java\\OWLComparison\\CVDetails.rdf");
+                ("/home/dharshan/IdeaProjects/SampleWebProject/src/main/java/OWLComparison/CVDetails.rdf");
 
 //        Model modelFile2 = FileManager.get().loadModel
 //                ("C:\\Users\\admin\\IdeaProjects\\SampleWebProject\\src\\main\\java\\OWLComparison\\JobAdvt.rdf");
@@ -56,6 +58,7 @@ public class ServletComparison extends HttpServlet {
                             "(str (?jobcatObj) as ?label5) " +
                             "(str (?candidateSkill) as ?label8) " +
                             "(str (?candidateExp) as ?label9) " +
+                            "(str (?qualificationType) as ?label10) " +
                             "(str (?jobSkill) as ?label7) WHERE { " +
                             " ?person ns0:Full_Name ?object ." +
                             " ?person ns0:Email_Id ?object2 ." +
@@ -64,9 +67,11 @@ public class ServletComparison extends HttpServlet {
                             " ?person ns0:Job_Category ?jobcatObj ." +
                             " ?person ns0:Skills ?candidateSkill ." +
                             " ?person ns0:YearsofExperience ?candidateExp ." +
+                            " ?person ns0:Qualification_Type ?qualificationType ." +
                             " ?job ns0:JobID  \"" + jobID + "\"." +
-                            " ?job ns0:JobSkills ?jobSkill ." +
-                            " filter (?jobSkill = ?candidateSkill)" +
+                            " ?job ns0:Required_Skills ?jobSkill ." +
+                            " FILTER regex(?jobSkill, ?candidateSkill)" +
+//                            " filter (?jobSkill = ?candidateSkill)" +
                             "}";
 
 
@@ -107,35 +112,56 @@ public class ServletComparison extends HttpServlet {
                     "<th scope=\"col\">Candidate</th>" +
                     "<th scope=\"col\">Email Address</th>" +
                     "<th scope=\"col\">Contact Number</th>" +
-                    "<th scope=\"col\">Highest Qualification</th>" +
-                    "<th scope=\"col\"></th>" +
+                    "<th scope=\"col\">Skills</th>" +
+                    "<th scope=\"col\">Score Points</th>" +
                     "</tr> </thead> <tbody>";
 
 
             QuerySolution sol = null;
+            RDFNode object5 = null;
+            RDFNode object6 = null;
+
             while (rs.hasNext()) {
                 sol = rs.nextSolution();
                 RDFNode object = sol.get("label");
                 RDFNode object2 = sol.get("label2");
                 RDFNode object3 = sol.get("label3");
                 RDFNode object4 = sol.get("label4");
+                object5 = sol.get("label8");
+                object6 = sol.getLiteral("label9");
+                int exp =((Literal) object6).getInt(); //error highlight this line
+                RDFNode object7 = sol.get("label10");
+
+                int scorePointQualification=0;
+                int scorePointExperience=0;
+
+                if (object7.toString().equals("Degree")){
+                    scorePointQualification = 5;
+                }
+                else if (object7.toString().equals("Diploma")){
+                    scorePointQualification = 3;
+                }
+
+                if (exp >= 0 && exp <= 3){
+                    scorePointExperience = 4;
+                }
+                else if(exp >= 4 && exp <= 7){
+                    scorePointExperience = 5;
+                }
+
+                int subTotalPoints = scorePointExperience + scorePointQualification;
 
                 str += "<tr><td> " + object + " </td>" +
                         "<td> " + object2 + " </td>" +
                         "<td> " + object3 + " </td>" +
-                        "<td> " + object4 + " </td>" +
-//                        "<td> <form action=\"CandidateDetails\" method=\"get\">\n" +
-//                        "       <input type=\"submit\" value = \"Details\">\n" +
-//                        "     </form> </td> " +
+                        "<td> " + object5 + " </td>" +
+                        "<td title ='Highest Qualification: "+ object4 +" Experience: "+ object6 +"'> " + subTotalPoints + " </td>" +
                         "</tr>";
+
             }
 
             str += "</tbody></table>";
             out.println(str);
-
-            RDFNode object5 = sol.get("label8");
-            RDFNode object6 = sol.get("label9");
-
 
             out.println("<form> " +
                     "<input type=\"button\" " +
@@ -143,39 +169,22 @@ public class ServletComparison extends HttpServlet {
                     "onclick=\"window.location.href='http://localhost:8080/PictorialRepresentation.jsp'\" />" +
                     "</form>");
 
-            String printOtherDetails =
+            out.println("<script> " +
+                    "var table = document.getElementById('table');" +
+                    "for (var i = 0; i <= table.rows.length; i++){" +
+                        "table.rows[i].onclick = function () {" +
+                            "document.getElementById(\"experience\").value = \"" + object6 + "\";" +
+                        "};" +
+                    "}" +
+                    "</script>");
 
+            String printOtherDetails =
                     "<div class='Other-Details'>" +
-                            "Skills: <input type='text' name='skills' id='skills' readonly/><br><br>" +
                             "Years of Experience: <input type='text' name='experience' id='experience' readonly/><br><br>";
 
             out.println(printOtherDetails);
 
-            String printDetails =
-
-                    "<div class = 'Candidatedetails-div'>First Name: <input type='text' name='fname' id='fname' readonly/><br><br>" +
-                            "Email Address: <input type='text' name='emailID' id='emailID' readonly/><br><br>" +
-                            "Contact Number: <input type='text' name='conNos' id='conNos' readonly/><br><br>" +
-                            "Highest Qualification: <input type='text' name='qualification' id='qualification' readonly/><br><br> </div>";
-
-//            out.println(printDetails);
-
-            out.println("<script> " +
-                    "var table = document.getElementById('table');" +
-                    "for (var i = 0; i < table.rows.length; i++){" +
-                    "table.rows[i].onclick = function () {" +
-//                    "document.getElementById(\"fname\").value = this.cells[0].innerHTML;" +
-//                    "document.getElementById(\"emailID\").value = this.cells[1].innerHTML;" +
-//                    "document.getElementById(\"conNos\").value = this.cells[2].innerHTML;" +
-//                    "document.getElementById(\"qualification\").value = this.cells[3].innerHTML;" +
-                    "document.getElementById(\"skills\").value = \"" + object5 + "\";" +
-                    "document.getElementById(\"experience\").value = \"" + object6 + "\";" +
-                    "};" +
-                    "}" +
-                    "</script>");
-
             out.println("</body></html>");
-
 
         }
         catch (Exception e){

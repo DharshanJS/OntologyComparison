@@ -41,15 +41,16 @@
     <div class="col-sm-6 col-sm-offset-3 form-box">
         <label>By ID</label>
         <input class="amount" type="radio" name="amount" value="100" />
-        <label>By Class</label>
-        <input class="amount" type="radio" name="amount" value="150" />
+        <%--<label>By Class</label>
+        <input class="amount" type="radio" name="amount" value="150" />--%>
         <div class="form-div">
             <form action="/ServletComparison" method="get">
                 <div class="JobIdentity" style="display: none">
                     <label>Job Advertisement ID</label>
                     <input type="text" id="jobID" name="JobID" placeholder="Enter your Job Advertisement ID">
                 </div>
-                <div class="JobCatSelection" style="display: none">
+
+                <%--<div class="JobCatSelection" style="display: none">
                     <label>Job Category</label>
                         <select id="jobCat" name="jobCat">
                             <option value="InformationTechnology">Information Technology</option>
@@ -60,7 +61,7 @@
                             <option value="ITTelecom">IT-Telecom</option>
                             <option value="Finance">Finance/ Accounting</option>
                         </select>
-                </div>
+                </div>--%>
                 <div class="submitBtn" style="display: none">
                     <input type="submit" value="Submit">
                 </div>

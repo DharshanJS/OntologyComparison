@@ -74,6 +74,14 @@ table tr:hover{
     height: 40px;
 }
 
+/*th:nth-of-type(5) {*/
+    /*display: none;*/
+/*}*/
+
+/*td:nth-of-type(5) {*/
+    /*display: none;*/
+/*}*/
+
 .Other-Details{
     padding: 25px 25px 30px 25px;
     background: #f2f2f2;
