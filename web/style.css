@@ -52,6 +52,7 @@ input[type=submit]:hover {
 }
 
 #table{
+    width: 100%;
     background-color: #cccccc;
     width: 100%;
     color: #000;
@@ -98,6 +99,19 @@ table tr:hover{
     text-align: left;
 }
 
+.dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate {
+    color: #ffffff;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.dataTables_paginate{
+    margin: 0px 600px 0 0;
+    color: white;
+}
+
+#bLengthChange{
+    display: -webkit-box;
+}
 
 
 

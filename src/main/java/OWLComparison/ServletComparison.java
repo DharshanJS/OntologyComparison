@@ -35,10 +35,6 @@ public class ServletComparison extends HttpServlet {
         Model modelFile = FileManager.get().loadModel
                 ("/home/dharshan/IdeaProjects/SampleWebProject/src/main/java/OWLComparison/CVDetails.rdf");
 
-//        Model modelFile2 = FileManager.get().loadModel
-//                ("C:\\Users\\admin\\IdeaProjects\\SampleWebProject\\src\\main\\java\\OWLComparison\\JobAdvt.rdf");
-
-
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
 
@@ -80,8 +76,11 @@ public class ServletComparison extends HttpServlet {
             ResultSet rs = qexec.execSelect();
             out.println("<html><head><title> Search Results </title>");
             out.println("<link rel='stylesheet' type='text/css' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' />");
+            out.println("<LINK REL=\"StyleSheet\" HREF=\"//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css\" TYPE=\"text/css\"> ");
             out.println("<LINK REL=\"StyleSheet\" HREF=\"/style.css\" TYPE=\"text/css\"> ");
+
             out.println("</head><body>");
+
 
             String navbar = "<nav class=\"navbar navbar-inverse\">\n" +
                     "        <div class=\"container-fluid\">\n" +
@@ -108,7 +107,7 @@ public class ServletComparison extends HttpServlet {
             out.println(navbar);
 
 
-            String str = "<table id='table'><thead class=\"thead-dark\"><tr>" +
+            String str = "<table id='table' class='display'><thead class=\"thead-dark\"><tr>" +
                     "<th scope=\"col\">Candidate</th>" +
                     "<th scope=\"col\">Email Address</th>" +
                     "<th scope=\"col\">Contact Number</th>" +
@@ -160,29 +159,48 @@ public class ServletComparison extends HttpServlet {
 
             }
 
+
+            out.println("<script" +
+                    "  src=\"http://code.jquery.com/jquery-3.3.1.min.js\"" +
+                    "  integrity=\"sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=\"" +
+                    "  crossorigin=\"anonymous\"></script>" +
+                    "<script type = text/javascript src=\"//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js\"></script>" +
+                    "<script type = text/javascript>" +
+                    "                    $(document).ready(function(){" +
+                    "                        $('#table').DataTable({" +
+                    "                           'order': [[4, 'desc']]," +
+                    "                           'bLengthChange': true" +
+                    "                       });" +
+                    "                     });" +
+                    "                    </script>");
+
             str += "</tbody></table>";
             out.println(str);
 
-            out.println("<form> " +
-                    "<input type=\"button\" " +
-                    "value=\"View Statistics\" " +
-                    "onclick=\"window.location.href='http://localhost:8080/PictorialRepresentation.jsp'\" />" +
-                    "</form>");
 
-            out.println("<script> " +
-                    "var table = document.getElementById('table');" +
-                    "for (var i = 0; i <= table.rows.length; i++){" +
-                        "table.rows[i].onclick = function () {" +
-                            "document.getElementById(\"experience\").value = \"" + object6 + "\";" +
-                        "};" +
-                    "}" +
-                    "</script>");
 
-            String printOtherDetails =
-                    "<div class='Other-Details'>" +
-                            "Years of Experience: <input type='text' name='experience' id='experience' readonly/><br><br>";
 
-            out.println(printOtherDetails);
+
+//            out.println("<form> " +
+//                    "<input type=\"button\" " +
+//                    "value=\"View Statistics\" " +
+//                    "onclick=\"window.location.href='http://localhost:8080/PictorialRepresentation.jsp'\" />" +
+//                    "</form>");
+//
+//            out.println("<script> " +
+//                    "var table = document.getElementById('table');" +
+//                    "for (var i = 0; i <= table.rows.length; i++){" +
+//                        "table.rows[i].onclick = function () {" +
+//                            "document.getElementById(\"experience\").value = \"" + object6 + "\";" +
+//                        "};" +
+//                    "}" +
+//                    "</script>");
+//
+//            String printOtherDetails =
+//                    "<div class='Other-Details'>" +
+//                            "Years of Experience: <input type='text' name='experience' id='experience' readonly/><br><br>";
+//
+//            out.println(printOtherDetails);
 
             out.println("</body></html>");
 
